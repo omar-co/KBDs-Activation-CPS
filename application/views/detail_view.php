@@ -14,44 +14,44 @@
             <div class="col-md-4">
                 <!-- Info Boxes Style 2 -->
                 <div class="info-box bg-teal">
-                        <span class="info-box-icon"><i class="ion ion-ios-pricetag-outline"></i></span>
+                    <span class="info-box-icon"><i class="ion ion-ios-pricetag-outline"></i></span>
 
-                        <div class="info-box-content">
-                            <span class="info-box-text">Phase 1. Foundation</span>
-                            <span class="progress-description">
+                    <div class="info-box-content">
+                        <span class="info-box-text">Phase 1. Foundation</span>
+                        <span class="progress-description">
                     Overall Status: <span class="label label-success">On Track</span>
                   </span>
-                        </div>
-                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box-content -->
                 </div>
             </div>
             <div class="col-md-4">
                 <!-- Info Boxes Style 2 -->
                 <div class="info-box bg-aqua">
-                        <span class="info-box-icon"><i class="ion ion-ios-pricetag-outline"></i></span>
+                    <span class="info-box-icon"><i class="ion ion-ios-pricetag-outline"></i></span>
 
-                        <div class="info-box-content">
-                            <span class="info-box-text">Phase 2. Operationalization</span>
-                            <span class="progress-description">
+                    <div class="info-box-content">
+                        <span class="info-box-text">Phase 2. Operationalization</span>
+                        <span class="progress-description">
                     Overall Status: <span class="label label-success">On Track</span>
 
                   </span>
-                        </div>
+                    </div>
                     <!-- /.info-box-content -->
                 </div>
             </div>
             <div class="col-md-4">
                 <!-- Info Boxes Style 2 -->
                 <div class="info-box bg-light-blue">
-                        <span class="info-box-icon"><i class="ion ion-ios-pricetag-outline"></i></span>
+                    <span class="info-box-icon"><i class="ion ion-ios-pricetag-outline"></i></span>
 
-                        <div class="info-box-content">
-                            <span class="info-box-text">Phase 3. Optimization</span>
-                            <span class="progress-desvcription">
+                    <div class="info-box-content">
+                        <span class="info-box-text">Phase 3. Optimization</span>
+                        <span class="progress-desvcription">
                     Overall Status: <span class="label label-success">On Track</span>
 
                   </span>
-                        </div>
+                    </div>
                     <!-- /.info-box-content -->
                 </div>
             </div>
@@ -97,13 +97,18 @@
                                                 ($task->status === 'Fair' ? 'label-warning' :
                                                     ($task->status === 'Off Track' ? 'label-danger' : 'bg-black')) ?>
 ">
-                                                    <a class="text-white" href="#" data-name="status" data-type="select"
-                                                       data-pk="<?php echo $task->id ?>"
-                                                       data-title="Select status"
-                                                       data-value="<?php echo $task->status ?>">
-                                                    <?php echo $task->status ?>
-
+                                                <?php if ($this->ion_auth->is_admin())
+                                                { ?>
+                                                <a class="text-white" href="#" data-name="status" data-type="select"
+                                                   data-pk="<?php echo $task->id ?>"
+                                                   data-title="Select status"
+                                                   data-value="<?php echo $task->status ?>">
+                                                        <?php } ?>
+                                                        <?php echo $task->status ?>
+                                                        <?php if ($this->ion_auth->is_admin())
+                                                        { ?>
                                                 </a>
+                                            <?php } ?>
                                                                                     </span>
                                         </td>
                                         <td><?php echo $task->owner ?></td>
