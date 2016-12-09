@@ -98,14 +98,16 @@
                                 { ?>
                                     <tr>
                                         <td> <?php echo $task->task->name ?></td>
-                                        <td><span class="label
+                                        <td><span id="<?php echo $task->id ?>" class="label
 <?php echo $task->status === 'On Track' ? 'label-success' :
                                                 ($task->status === 'Fair' ? 'label-warning' :
                                                     ($task->status === 'Off Track' ? 'label-danger' : 'bg-black')) ?>
 ">
                                                 <?php if ($this->ion_auth->is_admin())
                                                 { ?>
-                                                <a class="text-white" href="#" data-name="status" data-type="select"
+                                                <a class="text-white" href="#"
+                                                   data-name="status"
+                                                   data-type="select"
                                                    data-pk="<?php echo $task->id ?>"
                                                    data-title="Select status"
                                                    data-value="<?php echo $task->status ?>">

@@ -92,7 +92,7 @@
                                 { ?>
                                     <tr>
                                         <td> <?php echo $task->task->name ?></td>
-                                        <td><span class="label
+                                        <td><span id="<?php echo $task->id ?>" class="label
 <?php echo $task->status === 'On Track' ? 'label-success' :
                                                 ($task->status === 'Fair' ? 'label-warning' :
                                                     ($task->status === 'Off Track' ? 'label-danger' : 'bg-black')) ?>

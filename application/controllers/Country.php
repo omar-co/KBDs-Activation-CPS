@@ -35,8 +35,18 @@ class Country extends MY_Controller
            ],
            url:\'' . site_url('country/update') . '\',
            success: function(e, newValue) {
-    if(newValue == "On Track"){
-    $(\'.table tbody tr td span\').removeClass(\'label-warning\').addClass(\'bg-green\');
+           var id = $(this).data(\'pk\');
+    if(newValue === \'On Track\'){
+    $(\'#\' + id).removeClass(\'label-warning label-danger bg-black\').addClass(\'label-success\');
+    }
+    if(newValue === "Off Track"){
+    $(\'#\' + id).removeClass(\'label-warning label-success bg-black\').addClass(\'label-danger\');
+    }
+    if(newValue == "Fair"){
+    $(\'#\' + id).removeClass(\'label-danger label-success bg-black\').addClass(\'label-warning\');
+    }
+    if(newValue == "Not Started"){
+    $(\'#\' + id).removeClass(\'label-warning label-success label-danger\').addClass(\'bg-black\');
     }
 }
            
