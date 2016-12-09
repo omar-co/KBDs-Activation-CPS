@@ -62,7 +62,7 @@
         <ul class="sidebar-menu">
             <li class="header">MAIN NAVIGATION</li>
             <li <?php echo $this->uri->segment(1) == 'dashboard'?'class="active"':'' ?>>
-                <a href="<?php echo site_url('') ?>">
+                <a href="<?php echo site_url('country/general') ?>">
                     <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                     <span class="pull-right-container">
             </span>

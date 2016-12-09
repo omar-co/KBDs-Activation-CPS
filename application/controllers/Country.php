@@ -33,9 +33,15 @@ class Country extends MY_Controller
               {value: \'Off Track\', text: \'Off Track\'},
               {value: \'Not Started\', text: \'Not Started\'}
            ],
-           url:\'' . site_url('country/update') . '\'
+           url:\'' . site_url('country/update') . '\',
+           success: function(e, newValue) {
+    if(newValue == "On Track"){
+    $(\'.table tbody tr td span\').removeClass(\'label-warning\').addClass(\'bg-green\');
+    }
+}
            
     });
+    
 });
 ';
 
@@ -45,10 +51,17 @@ class Country extends MY_Controller
             $this->_data['view'] = 'country_view';
             $this->_render_page();
         }
+        elseif($pais == 'general')
+        {
+            $this->_data['tasks'] = $this->get_country_data($pais);
+            $this->_data['title'] = 'KBD Activation Status';
+            $this->_data['view'] = 'general_view';
+            $this->_render_page();
+        }
         else
         {
             $this->_data['tasks'] = $this->get_country_data($pais);
-            $this->_data['title'] = $pais . 'Detail';
+            $this->_data['title'] = ucfirst($pais) . ' Detail';
             $this->_data['view'] = 'detail_view';
             $this->_render_page();
         }

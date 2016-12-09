@@ -12,6 +12,9 @@ class Sumary extends MY_Controller
     public function index()
     {
 
+
+        redirect('country/general');
+
         $deptresult = $this->Sumary_model->get_sumary_list();
         $this->_data['detalles'] = $deptresult;
 

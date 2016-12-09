@@ -1,7 +1,7 @@
 
 <footer class="main-footer">
     <div class="pull-right hidden-xs">
-        <b>Version</b> 1.0.0
+        <b>Version</b> 1.1.0
     </div>
     <strong>2016 KBDs Activation CPS.</strong>
 </footer>
