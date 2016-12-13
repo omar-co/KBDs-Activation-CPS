@@ -14,7 +14,8 @@
             <div class="col-md-4">
                 <!-- Info Boxes Style 2 -->
                 <div class="info-box bg-teal">
-                    <a href="<?php echo site_url('country') ?>" class="text-white">
+
+                    <a href="<?php echo site_url('pub') ?>" class="text-white">
                         <span class="info-box-icon"><i class="ion ion-ios-pricetag-outline"></i></span>
 
                         <div class="info-box-content">
@@ -30,7 +31,7 @@
             <div class="col-md-4">
                 <!-- Info Boxes Style 2 -->
                 <div class="info-box bg-aqua">
-                    <a href="<?php echo site_url('country') ?>" class="text-white">
+                    <a href="<?php echo site_url('pub') ?>" class="text-white">
                         <span class="info-box-icon"><i class="ion ion-ios-pricetag-outline"></i></span>
 
                         <div class="info-box-content">
@@ -47,7 +48,7 @@
             <div class="col-md-4">
                 <!-- Info Boxes Style 2 -->
                 <div class="info-box bg-light-blue">
-                    <a href="<?php echo site_url('country') ?>" class="text-white">
+                    <a href="<?php echo site_url('pub') ?>" class="text-white">
                         <span class="info-box-icon"><i class="ion ion-ios-pricetag-outline"></i></span>
 
                         <div class="info-box-content">

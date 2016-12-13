@@ -51,6 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller'] = 'sumary';
 $route['country/update'] = 'country/update';
+$route['pub/(:any)'] = 'pub/index/$1';
 $route['country/(:any)'] = 'country/index/$1';
 $route['login'] = 'auth/login';
 $route['logout'] = 'auth/logout';
