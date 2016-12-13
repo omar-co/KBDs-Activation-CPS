@@ -23,6 +23,7 @@ class Pub extends CI_Controller
         parent::__construct();
         $this->load->library('form_validation');
         $this->load->model('Task_country_model');
+        $this->load->model('Phase_country_model');
         $this->load->model('Country_model');
 
         $this->_data['estilos'] = array(
@@ -66,6 +67,7 @@ class Pub extends CI_Controller
         elseif($pais == 'general')
         {
             $this->_data['tasks'] = $this->get_country_data($pais);
+            $this->_data['status'] = $this->Phase_country_model->get_many_by('country_id',$this->get_country($pais));
             $this->_data['title'] = 'KBD Activation Status';
             $this->_data['view'] = 'pub_general_view';
             $this->_render_page();
@@ -73,6 +75,7 @@ class Pub extends CI_Controller
         else
         {
             $this->_data['tasks'] = $this->get_country_data($pais);
+            $this->_data['status'] = $this->Phase_country_model->get_many_by('country_id',$this->get_country($pais));
             $this->_data['title'] = ucfirst($pais) . ' Detail';
             $this->_data['view'] = 'detail_view';
             $this->_render_page();

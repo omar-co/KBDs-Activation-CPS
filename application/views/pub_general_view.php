@@ -21,8 +21,13 @@
                         <div class="info-box-content">
                             <span class="info-box-text">Phase 1. Foundation</span>
                             <span class="progress-description">
-                    Overall Status: <span class="label label-success">On Track</span>
-                  </span>
+                    Overall Status:
+                                <span class="label <?php echo $status[0]->status === 'On Track' ? 'label-success' :
+                                    ($status[0]->status === 'Fair' ? 'label-warning' :
+                                        ($status[0]->status === 'Off Track' ? 'label-danger' : 'bg-black')) ?>"
+                                      id="<?php echo $status[0]->id ?>">
+                                                        <?php echo $status[0]->status ?>
+                            </span>
                         </div>
                         <!-- /.info-box-content -->
                     </a>
@@ -37,9 +42,12 @@
                         <div class="info-box-content">
                             <span class="info-box-text">Phase 2. Operationalization</span>
                             <span class="progress-description">
-                    Overall Status: <span class="label label-success">On Track</span>
-
-                  </span>
+                    Overall Status: <span class="label <?php echo $status[1]->status === 'On Track' ? 'label-success' :
+                                    ($status[1]->status === 'Fair' ? 'label-warning' :
+                                        ($status[1]->status === 'Off Track' ? 'label-danger' : 'bg-black')) ?>"
+                                          id="<?php echo $status[1]->id ?>">
+                                                        <?php echo $status[1]->status ?>
+                            </span>
                         </div>
                     </a>
                     <!-- /.info-box-content -->
@@ -54,9 +62,12 @@
                         <div class="info-box-content">
                             <span class="info-box-text">Phase 3. Optimization</span>
                             <span class="progress-desvcription">
-                    Overall Status: <span class="label label-success">On Track</span>
-
-                  </span>
+                    Overall Status: <span class="label <?php echo $status[2]->status === 'On Track' ? 'label-success' :
+                                    ($status[2]->status === 'Fair' ? 'label-warning' :
+                                        ($status[2]->status === 'Off Track' ? 'label-danger' : 'bg-black')) ?>"
+                                          id="<?php echo $status[2]->id ?>">
+                                                        <?php echo $status[2]->status ?>
+                            </span>
                         </div>
                     </a>
                     <!-- /.info-box-content -->

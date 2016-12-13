@@ -21,7 +21,8 @@
                         <span class="progress-description">
                     Overall Status: <span class="label <?php echo $status[0]->status === 'On Track' ? 'label-success' :
                                 ($status[0]->status === 'Fair' ? 'label-warning' :
-                                    ($status[0]->status === 'Off Track' ? 'label-danger' : 'bg-black')) ?>" id="<?php echo $status[0]->id ?>">
+                                    ($status[0]->status === 'Off Track' ? 'label-danger' : 'bg-black')) ?>"
+                                          id="<?php echo $status[0]->id ?>">
                                 <a class="text-white" href="#" data-name="status_gen" data-type="select"
                                    data-pk="<?php echo $status[0]->id ?>"
                                    data-title="Select status"
@@ -44,7 +45,8 @@
                         <span class="progress-description">
                     Overall Status: <span class="label <?php echo $status[1]->status === 'On Track' ? 'label-success' :
                                 ($status[1]->status === 'Fair' ? 'label-warning' :
-                                    ($status[1]->status === 'Off Track' ? 'label-danger' : 'bg-black')) ?>" id="<?php echo $status[1]->id ?>">
+                                    ($status[1]->status === 'Off Track' ? 'label-danger' : 'bg-black')) ?>"
+                                          id="<?php echo $status[1]->id ?>">
                                 <a class="text-white" href="#" data-name="status_gen" data-type="select"
                                    data-pk="<?php echo $status[1]->id ?>"
                                    data-title="Select status"
@@ -68,7 +70,8 @@
                         <span class="progress-desvcription">
                     Overall Status: <span class="label <?php echo $status[2]->status === 'On Track' ? 'label-success' :
                                 ($status[2]->status === 'Fair' ? 'label-warning' :
-                                    ($status[2]->status === 'Off Track' ? 'label-danger' : 'bg-black')) ?>" id="<?php echo $status[2]->id ?>">
+                                    ($status[2]->status === 'Off Track' ? 'label-danger' : 'bg-black')) ?>"
+                                          id="<?php echo $status[2]->id ?>">
                                 <a class="text-white" href="#" data-name="status_gen" data-type="select"
                                    data-pk="<?php echo $status[2]->id ?>"
                                    data-title="Select status"
