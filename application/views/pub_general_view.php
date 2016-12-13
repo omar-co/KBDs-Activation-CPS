@@ -3,7 +3,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            <?php echo ucfirst($tasks[0]->country->name) ?> Detail
+            KBD Activation Status
         </h1>
     </section>
 
@@ -14,71 +14,51 @@
             <div class="col-md-4">
                 <!-- Info Boxes Style 2 -->
                 <div class="info-box bg-teal">
-                    <span class="info-box-icon"><i class="ion ion-ios-pricetag-outline"></i></span>
 
-                    <div class="info-box-content">
-                        <span class="info-box-text">Phase 1. Foundation</span>
-                        <span class="progress-description">
-                    Overall Status: <span class="label <?php echo $status[0]->status === 'On Track' ? 'label-success' :
-                                ($status[0]->status === 'Fair' ? 'label-warning' :
-                                    ($status[0]->status === 'Off Track' ? 'label-danger' : 'bg-black')) ?>" id="<?php echo $status[0]->id ?>">
-                                <a class="text-white" href="#" data-name="status_gen" data-type="select"
-                                   data-pk="<?php echo $status[0]->id ?>"
-                                   data-title="Select status"
-                                   data-value="<?php echo $status[0]->status ?>">
-                                                        <?php echo $status[0]->status ?>
-                                </a>
-                            </span>
+                    <a href="<?php echo site_url('pub') ?>" class="text-white">
+                        <span class="info-box-icon"><i class="ion ion-ios-pricetag-outline"></i></span>
+
+                        <div class="info-box-content">
+                            <span class="info-box-text">Phase 1. Foundation</span>
+                            <span class="progress-description">
+                    Overall Status: <span class="label label-success">On Track</span>
                   </span>
-                    </div>
-                    <!-- /.info-box-content -->
+                        </div>
+                        <!-- /.info-box-content -->
+                    </a>
                 </div>
             </div>
             <div class="col-md-4">
                 <!-- Info Boxes Style 2 -->
                 <div class="info-box bg-aqua">
-                    <span class="info-box-icon"><i class="ion ion-ios-pricetag-outline"></i></span>
+                    <a href="<?php echo site_url('pub') ?>" class="text-white">
+                        <span class="info-box-icon"><i class="ion ion-ios-pricetag-outline"></i></span>
 
-                    <div class="info-box-content">
-                        <span class="info-box-text">Phase 2. Operationalization</span>
-                        <span class="progress-description">
-                    Overall Status: <span class="label <?php echo $status[1]->status === 'On Track' ? 'label-success' :
-                                ($status[1]->status === 'Fair' ? 'label-warning' :
-                                    ($status[1]->status === 'Off Track' ? 'label-danger' : 'bg-black')) ?>" id="<?php echo $status[1]->id ?>">
-                                <a class="text-white" href="#" data-name="status_gen" data-type="select"
-                                   data-pk="<?php echo $status[1]->id ?>"
-                                   data-title="Select status"
-                                   data-value="<?php echo $status[1]->status ?>">
-                                                        <?php echo $status[1]->status ?>
-                                </a>
-                            </span>
+                        <div class="info-box-content">
+                            <span class="info-box-text">Phase 2. Operationalization</span>
+                            <span class="progress-description">
+                    Overall Status: <span class="label label-success">On Track</span>
 
                   </span>
-                    </div>
+                        </div>
+                    </a>
                     <!-- /.info-box-content -->
                 </div>
             </div>
             <div class="col-md-4">
                 <!-- Info Boxes Style 2 -->
                 <div class="info-box bg-light-blue">
-                    <span class="info-box-icon"><i class="ion ion-ios-pricetag-outline"></i></span>
+                    <a href="<?php echo site_url('pub') ?>" class="text-white">
+                        <span class="info-box-icon"><i class="ion ion-ios-pricetag-outline"></i></span>
 
-                    <div class="info-box-content">
-                        <span class="info-box-text">Phase 3. Optimization</span>
-                        <span class="progress-desvcription">
-                    Overall Status: <span class="label <?php echo $status[2]->status === 'On Track' ? 'label-success' :
-                                ($status[2]->status === 'Fair' ? 'label-warning' :
-                                    ($status[2]->status === 'Off Track' ? 'label-danger' : 'bg-black')) ?>" id="<?php echo $status[2]->id ?>">
-                                <a class="text-white" href="#" data-name="status_gen" data-type="select"
-                                   data-pk="<?php echo $status[2]->id ?>"
-                                   data-title="Select status"
-                                   data-value="<?php echo $status[2]->status ?>">
-                                                        <?php echo $status[2]->status ?>
-                                </a>
-                            </span>
+                        <div class="info-box-content">
+                            <span class="info-box-text">Phase 3. Optimization</span>
+                            <span class="progress-desvcription">
+                    Overall Status: <span class="label label-success">On Track</span>
 
                   </span>
-                    </div>
+                        </div>
+                    </a>
                     <!-- /.info-box-content -->
                 </div>
             </div>
@@ -126,7 +106,9 @@
 ">
                                                 <?php if ($this->ion_auth->is_admin())
                                                 { ?>
-                                                <a class="text-white" href="#" data-name="status" data-type="select"
+                                                <a class="text-white" href="#"
+                                                   data-name="status"
+                                                   data-type="select"
                                                    data-pk="<?php echo $task->id ?>"
                                                    data-title="Select status"
                                                    data-value="<?php echo $task->status ?>">

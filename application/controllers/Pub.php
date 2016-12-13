@@ -67,7 +67,7 @@ class Pub extends CI_Controller
         {
             $this->_data['tasks'] = $this->get_country_data($pais);
             $this->_data['title'] = 'KBD Activation Status';
-            $this->_data['view'] = 'general_view';
+            $this->_data['view'] = 'pub_general_view';
             $this->_render_page();
         }
         else
