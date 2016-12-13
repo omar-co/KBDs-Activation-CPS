@@ -9,8 +9,20 @@
 class Pub extends CI_Controller
 {
 
+    /**
+     *
+     * Array que pasa a la vista
+     *
+     * @var array
+     */
     public $_data = array();
 
+    /**
+     *
+     * Ion_Auth
+     *
+     * @var StdClass
+     */
     public $_user;
 
 
@@ -54,6 +66,12 @@ class Pub extends CI_Controller
 
     }
 
+    /**
+     *
+     * Genera la vista de paises y el general de paises
+     *
+     * @param null $pais
+     */
     public function index($pais = NULL)
     {
         array_push($this->_data['estilos'],'assets/plugins/flags/flags');
@@ -82,6 +100,13 @@ class Pub extends CI_Controller
         }
     }
 
+    /**
+     *
+     * Obtiene los datos del pais mediante el ID
+     *
+     * @param $pais int
+     * @return mixed
+     */
     private function get_country_data($pais)
     {
 
@@ -93,6 +118,13 @@ class Pub extends CI_Controller
                     ->get_many_by('country_id', $pais);
     }
 
+    /**
+     *
+     * Obtiene el ID del pais por su nombre
+     *
+     * @param $pais string
+     * @return mixed
+     */
     private function get_country($pais)
     {
         $result = $this->Country_model
@@ -101,6 +133,11 @@ class Pub extends CI_Controller
         return $result->id;
     }
 
+    /**
+     * @param null $data
+     * @param bool $returnhtml
+     * @return mixed
+     */
     protected function _render_page($data = null, $returnhtml = false)//I think this makes more sense
     {
         if (!empty($data))
