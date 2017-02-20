@@ -47,7 +47,7 @@ class MY_Controller extends CI_Controller
         }
 
         $this->_user = $this->ion_auth->user()->row();
-        $this->output->enable_profiler(TRUE);
+        $this->output->enable_profiler(FALSE);
     }
 
     protected function _render_page($data = null, $returnhtml = false)//I think this makes more sense
